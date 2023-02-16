@@ -2,6 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
    
 class Tasks extends CI_Controller {
+    public function index()
+    {
+        redirect('assignments');
+    }
     public function assignments($num = 0)
     {
         $this->load->model("Task");
