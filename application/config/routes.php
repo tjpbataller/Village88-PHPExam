@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /* my routes */
 /* set default controller to tasks */
 $route['default_controller'] = 'tasks';
-
+/* route for filtering results */
+$route['filter'] = 'tasks/filter';
 /* set show url to tasks controller method show*/
 $route['show'] = "tasks/show";
 /* set assignment url to tasks controller method assignments */
