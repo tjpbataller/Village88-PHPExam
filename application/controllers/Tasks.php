@@ -6,6 +6,10 @@ class Tasks extends CI_Controller {
     {
         $this->load->model("Task");
         $view_data = array("tasks" => $this->Task->show_all($base = 5, $num));
+        if($num !== 0)
+        {
+            $view_data['num'] = $num;
+        }
         $this->load->view("tasks/index", $view_data);
     }
     public function show()
