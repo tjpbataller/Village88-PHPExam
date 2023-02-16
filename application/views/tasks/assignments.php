@@ -1,11 +1,7 @@
 <?php
     $this->load->view("tasks/partials/header.php");
 ?>
-    <!-- 
-        ui
-        display all assignments
-        show more
-     -->
+    <!-- -->
      <div class="container-fluid w-50">
         <h1>All Assignments</h1>
         <table class="table">
@@ -19,6 +15,7 @@
             </thead>
             <tbody>
 <?php
+            /* loop through tasks */
             foreach($tasks as $task){
 ?>
             <tr>
@@ -32,7 +29,7 @@
 ?>
             </tbody>
         </table>
-        <form action="../tasks/show" method="post">
+        <form action="../show" method="post">
             <input type="hidden" name="more" value="more">
             <input class="btn btn-success w-100" type="submit" name="submit" value="Show more">
         </form>
